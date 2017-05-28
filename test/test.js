@@ -76,6 +76,245 @@ if (fs.existsSync(cscript) && fs.existsSync(source)) {
         });
     });
 
+    it('queryWithMetadata', function(next) {
+      connection
+        .query('SELECT * FROM Users', {fields: true})
+        .on('done', function(data, message, extras) {
+          expect(data).to.eql(
+            [
+              {
+                UserId: 1,
+                UserName: "Nuintun",
+                UserSex: "Male",
+                UserAge: 25
+              },
+              {
+                UserId: 2,
+                UserName: "Angela",
+                UserSex: "Female",
+                UserAge: 23
+              },
+              {
+                UserId: 3,
+                UserName: "Newton",
+                UserSex: "Male",
+                UserAge: 25
+              }
+            ]
+          );
+          expect(message).to.eql('SELECT * FROM Users success');
+          expect(extras).to.eql({
+            "fields": {
+              "UserId": {
+                "Attributes": {
+                  "adFldFixed": true,
+                  "adFldMayBeNull": true,
+                  "adFldMayDefer": true,
+                  "adFldUnknownUpdatable": true
+                },
+                "DefinedSize": 4,
+                "NumericScale": 255,
+                "Precision": 10,
+                "Properties": {
+                  "BASECOLUMNNAME": {
+                    "Type": "adVarWChar",
+                    "Value": null
+                  },
+                  "BASETABLENAME": {
+                    "Type": "adVarWChar",
+                    "Value": null
+                  },
+                  "BASECATALOGNAME": {
+                    "Type": "adVarWChar",
+                    "Value": null
+                  },
+                  "BASESCHEMANAME": {
+                    "Type": "adVarWChar",
+                    "Value": null
+                  },
+                  "KEYCOLUMN": {
+                    "Type": "adBoolean",
+                    "Value": false
+                  },
+                  "ISAUTOINCREMENT": {
+                    "Type": "adBoolean",
+                    "Value": false
+                  },
+                  "RELATIONCONDITIONS": {
+                    "Type": "adVarBinary",
+                    "Value": null
+                  },
+                  "CALCULATIONINFO": {
+                    "Type": "adVarBinary",
+                    "Value": null
+                  },
+                  "OPTIMIZE": {
+                    "Type": "adBoolean",
+                    "Value": false
+                  }
+                },
+                "Type": "adInteger"
+              },
+              "UserName": {
+                "Attributes": {
+                  "adFldIsNullable": true,
+                  "adFldMayBeNull": true,
+                  "adFldMayDefer": true,
+                  "adFldUnknownUpdatable": true
+                },
+                "DefinedSize": 100,
+                "NumericScale": 255,
+                "Precision": 255,
+                "Properties": {
+                  "BASECOLUMNNAME": {
+                    "Type": "adVarWChar",
+                    "Value": null
+                  },
+                  "BASETABLENAME": {
+                    "Type": "adVarWChar",
+                    "Value": null
+                  },
+                  "BASECATALOGNAME": {
+                    "Type": "adVarWChar",
+                    "Value": null
+                  },
+                  "BASESCHEMANAME": {
+                    "Type": "adVarWChar",
+                    "Value": null
+                  },
+                  "KEYCOLUMN": {
+                    "Type": "adBoolean",
+                    "Value": false
+                  },
+                  "ISAUTOINCREMENT": {
+                    "Type": "adBoolean",
+                    "Value": false
+                  },
+                  "RELATIONCONDITIONS": {
+                    "Type": "adVarBinary",
+                    "Value": null
+                  },
+                  "CALCULATIONINFO": {
+                    "Type": "adVarBinary",
+                    "Value": null
+                  },
+                  "OPTIMIZE": {
+                    "Type": "adBoolean",
+                    "Value": false
+                  }
+                },
+                "Type": "adVarWChar"
+              },
+              "UserSex": {
+                "Attributes": {
+                  "adFldIsNullable": true,
+                  "adFldMayBeNull": true,
+                  "adFldMayDefer": true,
+                  "adFldUnknownUpdatable": true
+                },
+                "DefinedSize": 255,
+                "NumericScale": 255,
+                "Precision": 255,
+                "Properties": {
+                  "BASECOLUMNNAME": {
+                    "Type": "adVarWChar",
+                    "Value": null
+                  },
+                  "BASETABLENAME": {
+                    "Type": "adVarWChar",
+                    "Value": null
+                  },
+                  "BASECATALOGNAME": {
+                    "Type": "adVarWChar",
+                    "Value": null
+                  },
+                  "BASESCHEMANAME": {
+                    "Type": "adVarWChar",
+                    "Value": null
+                  },
+                  "KEYCOLUMN": {
+                    "Type": "adBoolean",
+                    "Value": false
+                  },
+                  "ISAUTOINCREMENT": {
+                    "Type": "adBoolean",
+                    "Value": false
+                  },
+                  "RELATIONCONDITIONS": {
+                    "Type": "adVarBinary",
+                    "Value": null
+                  },
+                  "CALCULATIONINFO": {
+                    "Type": "adVarBinary",
+                    "Value": null
+                  },
+                  "OPTIMIZE": {
+                    "Type": "adBoolean",
+                    "Value": false
+                  }
+                },
+                "Type": "adVarWChar"
+              },
+              "UserAge": {
+                "Attributes": {
+                  "adFldFixed": true,
+                  "adFldIsNullable": true,
+                  "adFldMayBeNull": true,
+                  "adFldMayDefer": true,
+                  "adFldUnknownUpdatable": true
+                },
+                "DefinedSize": 4,
+                "NumericScale": 255,
+                "Precision": 10,
+                "Properties": {
+                  "BASECOLUMNNAME": {
+                    "Type": "adVarWChar",
+                    "Value": null
+                  },
+                  "BASETABLENAME": {
+                    "Type": "adVarWChar",
+                    "Value": null
+                  },
+                  "BASECATALOGNAME": {
+                    "Type": "adVarWChar",
+                    "Value": null
+                  },
+                  "BASESCHEMANAME": {
+                    "Type": "adVarWChar",
+                    "Value": null
+                  },
+                  "KEYCOLUMN": {
+                    "Type": "adBoolean",
+                    "Value": false
+                  },
+                  "ISAUTOINCREMENT": {
+                    "Type": "adBoolean",
+                    "Value": false
+                  },
+                  "RELATIONCONDITIONS": {
+                    "Type": "adVarBinary",
+                    "Value": null
+                  },
+                  "CALCULATIONINFO": {
+                    "Type": "adVarBinary",
+                    "Value": null
+                  },
+                  "OPTIMIZE": {
+                    "Type": "adBoolean",
+                    "Value": false
+                  }
+                },
+                "Type": "adInteger"
+              }
+            }
+          });
+
+          next();
+        }).on('fail', function(error) {
+          next(error);
+        });
+    });
+
     it('execute', function(next) {
       connection
         .execute('INSERT INTO Users(UserName, UserSex, UserAge) VALUES ("Nuintun", "Male", 25)')
