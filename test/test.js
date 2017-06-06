@@ -118,39 +118,23 @@ if (fs.existsSync(cscript) && fs.existsSync(source)) {
                 "Properties": {
                   "BASECOLUMNNAME": {
                     "Type": "adVarWChar",
-                    "Value": null
+                    "Value": "UserId"
                   },
                   "BASETABLENAME": {
                     "Type": "adVarWChar",
-                    "Value": null
-                  },
-                  "BASECATALOGNAME": {
-                    "Type": "adVarWChar",
-                    "Value": null
-                  },
-                  "BASESCHEMANAME": {
-                    "Type": "adVarWChar",
-                    "Value": null
-                  },
-                  "KEYCOLUMN": {
-                    "Type": "adBoolean",
-                    "Value": false
+                    "Value": "Users"
                   },
                   "ISAUTOINCREMENT": {
                     "Type": "adBoolean",
-                    "Value": false
+                    "Value": true
                   },
-                  "RELATIONCONDITIONS": {
-                    "Type": "adVarBinary",
-                    "Value": null
-                  },
-                  "CALCULATIONINFO": {
-                    "Type": "adVarBinary",
-                    "Value": null
-                  },
-                  "OPTIMIZE": {
+                  "ISCASESENSITIVE": {
                     "Type": "adBoolean",
                     "Value": false
+                  },
+                  "COLLATINGSEQUENCE": {
+                    "Type": "adInteger",
+                    "Value": 1033
                   }
                 },
                 "Type": "adInteger"
@@ -168,39 +152,23 @@ if (fs.existsSync(cscript) && fs.existsSync(source)) {
                 "Properties": {
                   "BASECOLUMNNAME": {
                     "Type": "adVarWChar",
-                    "Value": null
+                    "Value": "UserName"
                   },
                   "BASETABLENAME": {
                     "Type": "adVarWChar",
-                    "Value": null
-                  },
-                  "BASECATALOGNAME": {
-                    "Type": "adVarWChar",
-                    "Value": null
-                  },
-                  "BASESCHEMANAME": {
-                    "Type": "adVarWChar",
-                    "Value": null
-                  },
-                  "KEYCOLUMN": {
-                    "Type": "adBoolean",
-                    "Value": false
+                    "Value": "Users"
                   },
                   "ISAUTOINCREMENT": {
                     "Type": "adBoolean",
                     "Value": false
                   },
-                  "RELATIONCONDITIONS": {
-                    "Type": "adVarBinary",
-                    "Value": null
-                  },
-                  "CALCULATIONINFO": {
-                    "Type": "adVarBinary",
-                    "Value": null
-                  },
-                  "OPTIMIZE": {
+                  "ISCASESENSITIVE": {
                     "Type": "adBoolean",
                     "Value": false
+                  },
+                  "COLLATINGSEQUENCE": {
+                    "Type": "adInteger",
+                    "Value": 1033
                   }
                 },
                 "Type": "adVarWChar"
@@ -218,39 +186,23 @@ if (fs.existsSync(cscript) && fs.existsSync(source)) {
                 "Properties": {
                   "BASECOLUMNNAME": {
                     "Type": "adVarWChar",
-                    "Value": null
+                    "Value": "UserSex"
                   },
                   "BASETABLENAME": {
                     "Type": "adVarWChar",
-                    "Value": null
-                  },
-                  "BASECATALOGNAME": {
-                    "Type": "adVarWChar",
-                    "Value": null
-                  },
-                  "BASESCHEMANAME": {
-                    "Type": "adVarWChar",
-                    "Value": null
-                  },
-                  "KEYCOLUMN": {
-                    "Type": "adBoolean",
-                    "Value": false
+                    "Value": "Users"
                   },
                   "ISAUTOINCREMENT": {
                     "Type": "adBoolean",
                     "Value": false
                   },
-                  "RELATIONCONDITIONS": {
-                    "Type": "adVarBinary",
-                    "Value": null
-                  },
-                  "CALCULATIONINFO": {
-                    "Type": "adVarBinary",
-                    "Value": null
-                  },
-                  "OPTIMIZE": {
+                  "ISCASESENSITIVE": {
                     "Type": "adBoolean",
                     "Value": false
+                  },
+                  "COLLATINGSEQUENCE": {
+                    "Type": "adInteger",
+                    "Value": 1033
                   }
                 },
                 "Type": "adVarWChar"
@@ -269,39 +221,23 @@ if (fs.existsSync(cscript) && fs.existsSync(source)) {
                 "Properties": {
                   "BASECOLUMNNAME": {
                     "Type": "adVarWChar",
-                    "Value": null
+                    "Value": "UserAge"
                   },
                   "BASETABLENAME": {
                     "Type": "adVarWChar",
-                    "Value": null
-                  },
-                  "BASECATALOGNAME": {
-                    "Type": "adVarWChar",
-                    "Value": null
-                  },
-                  "BASESCHEMANAME": {
-                    "Type": "adVarWChar",
-                    "Value": null
-                  },
-                  "KEYCOLUMN": {
-                    "Type": "adBoolean",
-                    "Value": false
+                    "Value": "Users"
                   },
                   "ISAUTOINCREMENT": {
                     "Type": "adBoolean",
                     "Value": false
                   },
-                  "RELATIONCONDITIONS": {
-                    "Type": "adVarBinary",
-                    "Value": null
-                  },
-                  "CALCULATIONINFO": {
-                    "Type": "adVarBinary",
-                    "Value": null
-                  },
-                  "OPTIMIZE": {
+                  "ISCASESENSITIVE": {
                     "Type": "adBoolean",
                     "Value": false
+                  },
+                  "COLLATINGSEQUENCE": {
+                    "Type": "adInteger",
+                    "Value": 1033
                   }
                 },
                 "Type": "adInteger"
