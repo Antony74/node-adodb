@@ -299,7 +299,12 @@ if (fs.existsSync(cscript) && fs.existsSync(source)) {
                 .on('done', function(data, message) {
 
                 expect(data).to.eql([
-                  {Id: 1, Firstname: 'Bill', Surname: 'Gates', DateofBirth: new Date(1955,10,28)}
+                  {
+                    Id: 1,
+                    Firstname: 'Bill',
+                    Surname: 'Gates',
+                    DateofBirth: "1955-10-28T00:00:00.000Z" // Exact format not important - I believe this is usual for JSON
+                  }
                 ]);
 
                   next();
