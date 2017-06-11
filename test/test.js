@@ -123,6 +123,51 @@ if (fs.existsSync(cscript) && fs.existsSync(source)) {
             next(error);
           });
       });
+
+      it('can retrieve date fields', function(next) {
+
+        var sSql = 'CREATE TABLE People(';
+        sSql    += '    Id AUTOINCREMENT(1,1) NOT NULL,';
+        sSql    += '    CONSTRAINT PrimaryKey PRIMARY KEY(Id),';
+        sSql    += '    Firstname TEXT(15),';
+        sSql    += '    Surname TEXT(15),';
+        sSql    += '    DateofBirth DATE)';
+
+        connection
+          .execute(sSql)
+          .on('done', function(data, message) {
+
+            connection
+              .execute('INSERT INTO People(Firstname, Surname, DateofBirth) VALUES ("Bill", "Gates", #1955/10/28#)')
+              .on('done', function(data, message) {
+
+                connection
+                  .query('SELECT * FROM People') 
+                  .on('done', function(data, message) {
+
+                  expect(data).to.eql([
+                    {
+                      Id: 1,
+                      Firstname: 'Bill',
+                      Surname: 'Gates',
+                      DateofBirth: "1955-10-28T00:00:00Z" 
+                    }
+                  ]);
+
+                    next();
+                  }).on('fail', function(error) {
+                    next(error);
+                  });
+
+              }).on('fail', function(error) {
+                next(error);
+              });
+            
+          }).on('fail', function(error) {
+            next(error);
+          });
+      })
+
     });
   });
 } else {
