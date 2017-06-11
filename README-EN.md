@@ -59,8 +59,14 @@ connection
 `ADODB.open(connection)`
 >Initialization database link parameters.
 
-`ADODB.query(sql)`
->Execute a SQL statement that returns a value.
+`ADODB.resolveType(type)`
+>Get field data type from type number, see [DataTypeEnum](https://docs.microsoft.com/en-us/sql/ado/reference/ado-api/datatypeenum).
+
+`ADODB.resolveAttr(attr)`
+>Get field data attribute from attribute number, see [FieldAttributeEnum](https://docs.microsoft.com/en-us/sql/ado/reference/ado-api/datatypeenum).
+
+`ADODB.query(sql, [schema])`
+>Execute a SQL statement that returns a value or with field schema.
 
 `ADODB.execute(sql, [scalar])`
 >Execute a SQL statement with no return value or with updated statistics.
