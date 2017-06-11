@@ -27,11 +27,10 @@ ADODB.prototype = {
 
     return proxy.exec(command, params);
   },
-  query: function(sql, opt) {
+  query: function(sql) {
     return proxy.exec('query', {
       connection: this.connection,
-      sql: sql,
-      fields: opt ? opt.fields : undefined
+      sql: sql
     });
   }
 }
