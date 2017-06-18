@@ -31,6 +31,14 @@ ADODB.prototype = {
       schema: !!schema,
       sql: sql
     });
+  },
+  openSchema: function(queryType, criteria, schemaId) {
+    return proxy.exec('openSchema', {
+      connection: this.connection,
+      queryType: queryType,
+      criteria: criteria,
+      schemaId: schemaId
+    })
   }
 }
 
